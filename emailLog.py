@@ -8,13 +8,13 @@ def send_message():
     s.connect("smtp.gmail.com",587)
     s.ehlo()
     s.starttls()
-    USERNAME = 'johnleerbp@gmail.com'
-    PASSWORD = 'pieckcmrules1'
+    USERNAME = 'usernamehere'
+    PASSWORD = 'passwordhere'
     emailFile = open('/home/pi/Adafruit_DHT/examples/email.txt', 'r')
     receivingEmail = str(emailFile.read())
     s.login(USERNAME, PASSWORD)
 
-    toEmail, fromEmail = receivingEmail, 'johnleerbp@gmail.com'
+    toEmail, fromEmail = receivingEmail, 'emailhere@gmail.com'
     msg['Subject'] = 'Sensor Log'
     msg['From'] = fromEmail
     body = 'Attached is a log for the Server Sensor'
